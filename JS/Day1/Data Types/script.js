@@ -11,8 +11,7 @@ a
 //numbers
 //booleans
 //arrays
-//objects
-//functions
+//objects 
 //undefined
 //null
 
@@ -59,3 +58,44 @@ console.log( typeof factor); //prints object!! , this is a bug in js
 //Undefined is a variable that has not been defined
 let name; //we have not defined the variable name
 console.log(typeof name); //prints undefined
+
+
+   //objects
+    //objects are key value pairs
+    const myName = 'arsalan';
+    const myAge = 22;
+    const person = {
+        name: 'arsalan',
+        age: 22,
+    };
+    console.log(person); //prints {name: "arsalan", age: 22}
+    //We can use DOT notation to tap into the object
+    console.log(person.name); //prints arsalan
+
+
+
+    //Arrays
+    //Arrays are a list of items
+    const myArray = [1,2,3,4,5];
+    console.log(myArray); //prints [1,2,3,4,5]
+    //We can use the index to tap into the array which starts form 0 till size-1
+    console.log(myArray[0]); //prints 1
+    
+
+    //Dates
+    //Dates are a special type of object
+    const today = new Date();
+    console.log(today); //prints 2023-02-01T12:00:00.000Z
+
+
+
+    //Statically typed vs Dynamically typed
+    //javascript is a dynamically typed language
+      
+    let message = "hello world!";
+    console.log(typeof message); //prints string
+
+    message = 10;
+    console.log(typeof message); //prints number
+
+  
