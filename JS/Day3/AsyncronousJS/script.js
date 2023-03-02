@@ -1,52 +1,52 @@
-//Syncronous JS
-console.log("I");
-console.log("Eat");
-console.log("Icecream");
-console.log("with");
-console.log("a");
-console.log("spoon");
+ //Syncronous JS
+// console.log("I");
+// console.log("Eat");
+// console.log("Icecream");
+// console.log("with");
+// console.log("a");
+// console.log("spoon");
 //JS runs the code from top to bottom, line by line
 
-//Asyncronous JS
+ //Asyncronous JS
 
-console.log("I");
-console.log("Eat");
-setTimeout(()=>{
-    console.log("icecream");
-}, 3000);
-console.log("with");
-console.log("a");
-console.log("spoon");
+// console.log("I");
+// console.log("Eat");
+// setTimeout(()=>{
+//     console.log("icecream");
+// }, 3000);
+// console.log("with");
+// console.log("a");
+// console.log("spoon");
 
 
 //Callbacks
 //A callback is a function that is passed as an argument to another function and is executed after some operation has been completed.
-function one(call_two) {
-    console.log("one completed");
-    call_two();
-}
-function two() {
-    console.log("two");
-}
+// function one(call_two) {
+//     console.log("one completed");
+//     call_two();
+// }
+// function two() {
+//     console.log("two");
+// }
 
-one(two);
+// one(two);
 //one completed
 //two also gets printed
 
 
 //Understanding Callbacks more...
 
-let order = (call_production)=> {
- console.log("Order placed");
- call_production();
-};
+// let order = (call_production)=> {
+//  console.log("Order placed");
+//  call_production();
+// };
 
-let production = ()=>
-{
- console.log("Production started");
-};
+// let production = ()=>
+// {
+//  console.log("Production started");
+// };
 
-order(production);
+// order(production);
 //Order placed , Production started gets printed in console!
 
 //Understanding relation of frontend and backend
@@ -62,12 +62,12 @@ let stock = {
 };
 
 
-let order1 = (Fruit_name, call_production1) =>{
-    setTimeout(()=>{
-        console.log(`${stock.Fruits[Fruit_name]} was selected`);
-        call_production1();
-    }, 2000);
-};
+// let order1 = (Fruit_name, call_production1) =>{
+//     setTimeout(()=>{
+//         console.log(`${stock.Fruits[Fruit_name]} was selected`);
+//         call_production1();
+//     }, 2000);
+// };
 
 //callback hell
 // let production1 = () =>{
@@ -100,5 +100,62 @@ let order1 = (Fruit_name, call_production1) =>{
 
 //Promises
 //Saves us from callback hell
+//USING THE STOCK ABOVE
 
+let is_shop_open = true;
+
+let order = (time, work) => {
+    return new Promise((resolve , reject)=>{
+      if(is_shop_open) {
+      setTimeout(()=>{
+        resolve( work() );
+      },time);
+      }else{
+            reject(console.log("Our shop is closed"));
+      }
+      
+    })
+}
  
+
+order(2000, () => console.log(`${stock.Fruits[0]} was selected`))//strawberry was selected gets logged in console
+// Promise chaining using .then()
+ .then(()=>{
+    return order(0000, ()=> console.log("Production has started!"))
+ })
+
+ .then(()=>{
+    return order(2000,()=>{console.log("Fruit has been chopped ");})
+ })
+
+ .then(()=> {
+  return order(1000,()=> console.log(`${stock.liquid[0]} and ${stock.liquid[1]} was added !`))
+ })
+
+.then(()=>{
+    return order(1000,()=> console.log("The machine was started!"))
+})
+.then(()=>{
+    return order(2000,()=> console.log(`Icecream placed on ${stock.holder[1]}`))
+})
+.then(()=>{
+    return order(3000,()=> console.log(`${stock.toppings[0]} was selected as toppings`))
+})
+.then(()=>{
+    return order(2000,()=> console.log("Served Icecream!"))
+})
+
+
+//Error handling using .catch()
+.catch(()=>{
+    console.log("Customer left");
+}) 
+
+//.finally is used to execute a function after the promise is settled
+
+.finally(()=>{
+    console.log("Day ended, shop is closed");
+})
+
+
+

@@ -8,3 +8,10 @@
 
 # Callbacks 
 - Check html file for more understanding
+
+# Promises
+- Check promises cycle image 
+-  Time & work
+- Promise chaining
+- Error Handling 
+- .finally handler 
