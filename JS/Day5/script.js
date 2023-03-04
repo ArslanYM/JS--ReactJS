@@ -43,7 +43,7 @@ console.log(doublednum);//[2, 4, 6, 8, 10]
 //Filter
 //creates new array
 //returns true or false
-var numbers = [1,2,3,4,5,6,7,8,9,10];
+//var numbers = [1,2,3,4,5,6,7,8,9,10];
 const even = numbers.filter(isEven);
 
 function isEven(value, index, array){
@@ -52,5 +52,55 @@ function isEven(value, index, array){
 console.log(even);//[2 , 4, 6, 8, 10]
 
 
+//reduce
+//returns a single value
+
+var numbers = [1,2,3,4,5,6,7,8,9,10];
+//if we want to add all the numbers in the array
+//reduce() method takes 2 arguments
+//1. callback function
+//2. initial value
+var sum = numbers.reduce(add, 0);//returns 55
+
+//Tip: You want to compress the array into a single value , then use reduce
 
 
+//slice
+//returns a new array
+//doesnt change the original array
+var arr = [1,2,3,4,5,6,7,8,9,10];
+var sliced = arr.slice(2, 5);//returns [3,4,5]  
+
+
+//if you want to return the last 3 elements of the array
+var sliced = arr.slice(-3);//returns [8,9,10]
+console.log(sliced);/./[8,9,10]
+
+
+//splice
+//changes the original array
+//returns the removed elements
+var arr = [1,2,3,4,5,6,7,8,9,10];
+var removed = arr.splice(2, 5);//returns [3,4,5,6,7]
+console.log(arr);//[1,2,8,9,10]
+
+
+
+//sort
+//changes the original array
+//returns the sorted array
+const names = ['mario', 'shaun', 'chun-li', 'yoshi', 'luigi'];
+names.sort();//returns ['chun-li', 'luigi', 'mario', 'shaun', 'yoshi']
+
+//Tip: sort() method sorts the values as strings by default
+
+//if you want to sort the numbers
+var numbers = [10, 50, 40, 30, 20, 100];
+numbers.sort((a, b)=>{
+    //if a-b is positive, a will be sorted before b
+    //if a-b is negative, b will be sorted before a
+    //if a-b is 0, a and b will be sorted as they are
+    return a-b});//returns [10, 20, 30, 40, 50, 100]
+
+ 
+//cocat
