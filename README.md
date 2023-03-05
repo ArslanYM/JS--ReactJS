@@ -7,9 +7,9 @@
 - Async Await
 - Array & String methods
 - Advanced Concepts
+  - Hoisting
   - Classes
   - Scoping
-  - Hoisting 
   - Closures
   - ES6+ features
   - Import/Export
