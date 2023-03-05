@@ -4,3 +4,5 @@
 - Based on promises 
 - Check `main.js` for syntax 
 - Check out the page source for complete understanding
+# Fetch is used to tap into data incoming from an API 
+- We can use `.then`method or async fucntions for smooth implementation of fetch.
