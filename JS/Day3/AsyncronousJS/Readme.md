@@ -8,7 +8,7 @@
 
 # Callbacks 
 - Check html file for more understanding
-<<<<<<< HEAD
+
 
 # Promises
 - Check promises cycle image 
@@ -16,5 +16,4 @@
 - Promise chaining
 - Error Handling 
 - .finally handler 
-=======
->>>>>>> b2fac0d463147473a0330ebce4cd6c936e35dc8b
+

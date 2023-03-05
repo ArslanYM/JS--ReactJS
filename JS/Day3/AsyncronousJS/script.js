@@ -94,10 +94,6 @@ let order1 = (Fruit_name, call_production1) =>{
 // },1000);
 
 // order1(0, production1);
-
-
-
-
 //Promises
 //Saves us from callback hell
 
