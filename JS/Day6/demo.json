@@ -1,0 +1,26 @@
+[
+  {
+    "firstName": "John",
+    " lastName": "Doe",
+    "age": 25,
+    "address": {
+      "streetAddress": "21 2nd Street",
+      "city": "New York",
+      "state": "NY",
+      "postalCode": "10021"
+    }
+  },
+  {
+    "firstName": "Jane",
+    " lastName": "Doe",
+    "age": 23,
+    "address": {
+      "streetAddress": "21 2nd Street",
+      "city": "New York",
+      "state": "NY",
+      "postalCode": "10021"
+    }
+  }
+
+
+]
