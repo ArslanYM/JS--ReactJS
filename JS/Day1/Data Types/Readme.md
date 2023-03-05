@@ -9,21 +9,24 @@
 - null
 
 # Strings
-     const backticks = `${2 + 2}`; //data type string. We     can use backticks to create complex strings , We can     use variables inside backticks using '${variableName}    ';
-     
+     const backticks = `${2 + 2}`; //data type string. 
+     We can use backticks to create complex strings , 
+     We can use variables inside backticks using '${variableName}    ';
      const exampleString = "Hello World"; //data type string
      console.log(backticks); //prints 4
      console.log(exampleString); //data type string
      we can also use single quotes there is no difference
 
 # Numbers
-    We dont have to specify float or int , js   will     automatically detect it
+    We dont have to specify float or int , js   will 
+    automatically detect it
     const decimalnumber = 10.5; //data type number
     const wholeNumber = 10; //data type number
     console.log(wholeNumber); //prints 10
     console.log(decimalnumber); //prints 10.5
     console.log(wholeNumber + decimalnumber); //prints 20.5
-    console.log(exampleString / wholeNumber); //prints     NaN , which means Not a Number. We cant divide a     string by a number.
+    console.log(exampleString / wholeNumber); //prints NaN ,
+     which means Not a Number. We cant divide a     string by a number.
 
 # Booleans
     Booleans are either true or false
@@ -47,7 +50,8 @@
     Null is an empty value
     const factor = null;
     console.log(factor); //prints null
-    console.log( typeof factor); //prints object!! , this     is a bug in js
+    console.log( typeof factor); //prints object!! ,
+     this is a bug in js
 
 # UNDEFINED
      Undefined is a variable that has not been defined
