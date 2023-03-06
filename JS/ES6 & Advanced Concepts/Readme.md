@@ -10,9 +10,9 @@
 # Object Destructuring
 - conventionally :     
   const address =  {
-    street: '',
-    city: '',
-    country:''
+    street: ' ',
+    city: ' ',
+    country:' ' 
   };
   - if we want to access street 
   - either we can : 
@@ -45,3 +45,26 @@
     If we log combined , we will get the combination object of all three properties
  - Also lets us clone objects using ... 
 
+
+# Classes
+- Lets say we want to create two objects which have different name but have a similar method ,eg walk();
+- We can create classes which are blueprints for objects 
+
+- Example :
+  class Person {
+     constructor(name) {
+        this.name = name;
+     }
+     walk() {
+        console.log('walk');
+     }
+  }
+
+  - To create a person object 
+     const person1 = new Person("John");
+      - This will create a new object with name prop as John and method walk();  
+    const person2 = new Person("Malik");
+      - This will create a new object with name prop as Malik and method walk();  
+
+
+# Inheritance 
