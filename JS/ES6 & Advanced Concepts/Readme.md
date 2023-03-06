@@ -57,14 +57,14 @@
 - We can create classes which are blueprints for objects
 
 - Example :
-  class Person {
-  constructor(name) {
-  this.name = name;
-  }
-  walk() {
-  console.log('walk');
-  }
-  }
+   class Person {
+   constructor(name) {
+   this.name = name;
+   }
+   walk() {
+   console.log('walk');
+   }
+   }
 
   - To create a person object
     const person1 = new Person("John");
