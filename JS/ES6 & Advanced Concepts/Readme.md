@@ -68,3 +68,24 @@
 
 
 # Inheritance 
+- Lets us inherit properties of main class
+ - We use `extends` keyword 
+  -  Example : 
+    class Person {
+      constructor(name) {
+        this.name = name;
+      }
+      walk() {
+        console.log('walk');
+      }
+    }
+
+     class Teacher extends Person {
+        teach() {
+            console.log('teach');
+        }
+     }
+
+    const teacher = new Teacher('Arsalan');
+    - This will create a new person who is a teacher with teach method ,  a name  and a walk method. 
+    - Read about super() in inheritance.
