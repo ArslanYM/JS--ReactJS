@@ -38,3 +38,4 @@
 - We can pass props when we call them , and then use them to produce dynamic components
 - Check the React App to understand
 - Reduce complex code writing 
+- Check app.js to understand how it works (src/app.js)
