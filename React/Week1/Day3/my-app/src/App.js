@@ -1,16 +1,17 @@
 import './App.css';
 //importing the custom component
-import {User} from './User';
+import { User } from './User';
+import  {Planets}  from './Planets';
 function App() {
   const age = 18;
   const isGreen = true;
   const names = ['John', 'Paul', 'George', 'Ringo'];
   const users = [
     { name: 'John', age: 12 },
-    { name: 'Paul', age: 11},
+    { name: 'Paul', age: 11 },
     { name: 'George', age: 18 },
   ];
-  const planets = [ 
+  const planets = [
     { name: 'Mercury', isGasPlanet: false },
     { name: 'Venus', isGasPlanet: false },
     { name: 'Earth', isGasPlanet: false },
@@ -18,6 +19,7 @@ function App() {
     { name: 'Jupiter', isGasPlanet: true },
     { name: 'Saturn', isGasPlanet: true },
   ];
+  
   return (
     <div style={{ backgroundColor: "whitesmoke" }} className='App'>
       {age > 18 ? <h1>Congrats, you can vote</h1> : <h1>Sorry, you can't vote</h1>}
@@ -28,7 +30,7 @@ function App() {
         return <h1 key={key}>{value}</h1>;
       })}
       <br></br>
-      <h1>Here is when you loop through the users array of objects using map fnction</h1>
+      <h1>Here is when you loop through the users array of objects using map function</h1>
       {users.map((user, key) => {
         return (
           //Using the custom component for displaying the user
@@ -37,6 +39,17 @@ function App() {
             age={user.age}
           />
         );
+      })}
+      <br></br>
+      <h1>Here is when you loop through the planets array of objects using map function</h1>
+      {planets.map((planet, key) => {
+        return (
+          <Planets
+            name={planet.name}
+            isGasPlanet={planet.isGasPlanet}
+          />
+        );
+
       })}
     </div>
   );
