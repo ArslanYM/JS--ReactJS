@@ -32,5 +32,7 @@
 
 
 
-# State Management  in React 
-- 
+# State Management  in React
+
+- Managing data in an app is little tricky when many components are sharing and updating it. useState, useReducer, useMemo etc. are some state management hooks in React, which are very efficient and have their own ways to work in different scenarios. Though all these hooks are effective, there are still some situations where managing state becomes difficult.
+- React context is nothing but a global state to the app. It is a way to make a particular data available to all the components no matter how they are nested. Context helps you broadcast the data and changes happening to that data, to all the components. That’s why it is a very useful state management hook, when it comes to use cases like we discussed above. 
