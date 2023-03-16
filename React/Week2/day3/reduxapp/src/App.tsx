@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router , Route , Routes  } from "react-router-dom";
+import { BrowserRouter as Router , Route , Routes, Link  } from "react-router-dom";
 import { Home } from './pages/Home'
 import { Contact } from './pages/Contact'
 import { Login } from './pages/Login'
@@ -10,6 +10,9 @@ function App() {
     <div className="App">
       <Provider store={store}>
         <Router>
+          <Link to="Home">home </Link>
+          <Link to="Contact">contact</Link>
+          <Link to="Login">login</Link>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/contact" element={<Contact />} />
